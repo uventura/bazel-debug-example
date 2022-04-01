@@ -8,5 +8,7 @@ cc_library(
 
 cc_library(
     name = "generic",
+    srcs = ["generica.cpp"],
+    hdrs = ["generica.h"],
     visibility = ["//visibility:public"]
 )

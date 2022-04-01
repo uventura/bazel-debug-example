@@ -3,10 +3,10 @@
 // Utilizei uma flag para verificar se realmente estava funcionando
 
 // Para compilar em modo diferente do debug:
-//      bazel build :main -c opt
+//      bazel build :main
 
 // Para executar:
-//      .\bazel-bin\main.exe
+// .\bazel-bin\main.exe
 
 #include <iostream>
 
@@ -14,6 +14,7 @@
     #include "teste.h"
     #define SHOW(x) std::cout << x << "\n"
 #else
+    #include "generica.h"
     #define SHOW(x) std::cout << "Macro nao implementada...\n"
 #endif
 
@@ -23,5 +24,7 @@ int main()
 
     #ifdef EXIBIR_MENSAGEM
         testando();
+    #else
+        funcGenerica();
     #endif
 }
